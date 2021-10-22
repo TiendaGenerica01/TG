@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="html-head">
+<meta charset="ISO-8859-1">
+<title th:text="${pageTitle}"></title>
+</head>
+<body>
+<nav th:fragment="menu"
+      class="navbar is-success is-spaced"
+      role="navigation"
+      aria-label="main navigation"
+    >
+
+      <div class="navbar-menu has-shadow">
+        <div class="navbar-start" style="flex-grow: 1; justify-content: center">
+                  
+          <a class="navbar-item" th:href="@{/usuarios}">Usuarios</a>
+          <a class="navbar-item" th:href="@{/clientes}">Clientes</a>
+          <a class="navbar-item" th:href="@{/proveedores}">Proveedores</a>
+          <a class="navbar-item" th:href="@{/productos}">Productos</a>
+          <a class="navbar-item" th:href="@{/ventas}">Ventas</a>
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link">Reportes</a>
+            <div class="navbar-dropdown">
+              <a th:href="@{/reportes/Usuarios}" class="navbar-item">Listado de Usuarios</a>
+              <a th:href="@{/reportes/Clientes}" class="navbar-item">Listado de Clientes</a>
+               <a th:href="@{/reportes/Proveedores}" class="navbar-item">Listado de Proveedores</a>
+              <a class="navbar-item">Ventas por Cliente</a>
+              
+            </div>
+
+            
+               <div class="navbar-end">
+      <div class="navbar-item">
+        <div>
+
+           <h3  class="mr-4 ml-6 is-size-7"> Hola, <b>[[${#request.userPrincipal.principal.fullName}]]</b></h3>
+
+
+        </div>
+        <div>
+          <form th:action="@{/logout}" method="post">
+ 
+                       <input type="submit" value="Salir" style="background: none; color: inherit;
+	                   border: none; cursor: pointer;">
+                    </form>
+        </div>
+      </div>
+    </div>
+          </div>
+        </div>
+      </div>
+      
+    </nav>
+</body>
+</html>
