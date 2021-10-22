@@ -8,7 +8,7 @@
 		<version>2.5.5</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.edu.tiendaGenericaG1</groupId>
+	<groupId>com.tiendaGenericaG1</groupId>
 	<artifactId>tiendaGenericaG1</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>TGG1</name>
